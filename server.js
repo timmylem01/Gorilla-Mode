@@ -5,8 +5,8 @@ const app = express();
 const PORT = 3000;
 const DIST_DIR = path.join(__dirname, './dist');
 const HTML_FILE = path.join(DIST_DIR, './src/index.html');
-
-const apiRouter = require('./api');
+// const router = require('./api');
+const apiRouter = require('./server/routes/api');
 
 app.use(express.static(DIST_DIR));
 
@@ -23,11 +23,11 @@ app.use('/api', apiRouter);
 
 app.get('/api', (req, res) => {
   return res.status(200).send('hello from the server!');
-})
+});
 
 app.get('/', (req, res) => {
   res.sendFile(HTML_FILE);
-})
+});
 
 app.use((req, res) => res.status(404).send('This page does not exist.'));
 

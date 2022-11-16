@@ -1,5 +1,5 @@
 const { stringify } = require('querystring');
-const models = require('./gymModels');
+const models = require('../models/gymModels');
 
 const gymController = {};
 
@@ -21,7 +21,7 @@ gymController.createShoulders = (req, res, next) => {
         message: { err: 'An error occurred in gymController.createShoulders.' },
       })
     }
-    res.locals.result = result;
+    // res.locals.result = result;
     return next();
   });
 };
@@ -44,7 +44,7 @@ gymController.createBack = (req, res, next) => {
         message: { err: 'An error occurred in gymController.createBack.' },
       })
     }
-    res.locals.result = result;
+    // res.locals.result = result;
     return next();
   });
 };
@@ -67,7 +67,7 @@ gymController.createChest = (req, res, next) => {
         message: { err: 'An error occurred in gymController.createChest.' },
       })
     }
-    res.locals.result = result;
+    // res.locals.result = result;
     return next();
   });
 };
@@ -90,7 +90,7 @@ gymController.createArms = (req, res, next) => {
         message: { err: 'An error occurred in gymController.createArms.' },
       })
     }
-    res.locals.result = result;
+    // res.locals.result = result;
     return next();
   });
 };
@@ -113,7 +113,7 @@ gymController.createLegs = (req, res, next) => {
         message: { err: 'An error occurred in gymController.createLegs.' },
       })
     }
-    res.locals.result = result;
+    // res.locals.result = result;
     return next();
   });
 };

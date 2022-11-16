@@ -10,6 +10,7 @@ module.exports = {
   devServer: {
     host: 'localhost',
     port: 8080,
+    hot: true,
     static: {
       directory: path.join(__dirname, 'dist'),
       publicPath: '/'
