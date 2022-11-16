@@ -16,7 +16,12 @@ const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
   muscle: {type: String, required: true},
+  workout: String,
   difficulty: String,
+  sets: Number,
+  reps: Number,
+  description: String,
+  example: String,
 });
 
 const Shoulder = mongoose.model('shoulders', workoutSchema);

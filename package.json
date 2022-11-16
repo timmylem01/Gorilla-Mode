@@ -5,6 +5,7 @@
   "main": "api.js",
   "scripts": {
     "start": "node server.js",
+    "dev": "webpack --mode development && node server.js",
     "startDev": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
   },
