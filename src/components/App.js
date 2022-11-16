@@ -6,8 +6,11 @@ import './styles.css';
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1>hello</h1>
+      <div id="main">
+        <h1>Let's Go</h1>
+        <p>What are we working out today?</p>
+        <input placeholder='Please enter a muscle group..'></input>
+        <button>Go!</button>
       </div>
     )
   }

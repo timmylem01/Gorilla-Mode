@@ -129,8 +129,8 @@ gymController.getShoulders = (req, res, next) => {
         status: 400,
         message: { err: 'An error occurred in gymController.getShoulders.' },
       });
-    } else if (docs.length === 1) {
-      res.locals.result = result;
+    } else {
+      res.locals.result = docs;
       return next();
     }
   })
@@ -147,8 +147,8 @@ gymController.getBack = (req, res, next) => {
         status: 400,
         message: { err: 'An error occurred in gymController.getBack.' },
       });
-    } else if (docs.length === 1) {
-      res.locals.result = result;
+    } else {
+      res.locals.result = docs;
       return next();
     }
   })
@@ -165,8 +165,8 @@ gymController.getChest = (req, res, next) => {
         status: 400,
         message: { err: 'An error occurred in gymController.getChest.' },
       });
-    } else if (docs.length === 1) {
-      res.locals.result = result;
+    } else {
+      res.locals.result = docs;
       return next();
     }
   })
@@ -183,8 +183,9 @@ gymController.getArms = (req, res, next) => {
         status: 400,
         message: { err: 'An error occurred in gymController.getArms.' },
       });
-    } else if (docs.length === 1) {
-      res.locals.result = result;
+    } else {
+      // res.send(docs)
+      res.locals.result = docs;
       return next();
     }
   })
@@ -201,8 +202,8 @@ gymController.getLegs = (req, res, next) => {
         status: 400,
         message: { err: 'An error occurred in gymController.getLegs.' },
       });
-    } else if (docs.length === 1) {
-      res.locals.result = result;
+    } else {
+      res.locals.result = docs;
       return next();
     }
   })
