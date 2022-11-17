@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/timmylem01/Solo-Project-1#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongoose": "^6.7.2",
     "node": "^19.1.0",
@@ -28,7 +29,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.4.3",
-    "react-router-dom": "^6.4.3"
+    "react-router-dom": "^6.4.3",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
