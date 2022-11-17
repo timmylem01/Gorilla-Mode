@@ -1,5 +1,4 @@
 // Dropdown.js 
-
 import React from "react";
 import {
   DropdownWrapper,
@@ -12,8 +11,8 @@ import {
 export function Dropdown(props) {
   return (
     <DropdownWrapper
-      action={props.action}
       onChange={props.onChange}
+      onSubmit={props.onSubmit}
     >
       <StyledLabel htmlFor="services">
         {props.formLabel}

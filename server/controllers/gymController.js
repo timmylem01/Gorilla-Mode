@@ -119,10 +119,7 @@ gymController.createLegs = (req, res, next) => {
 };
 
 gymController.getShoulders = (req, res, next) => {
-  const {
-    muscle
-  } = req.body;
-  const result = models.Shoulder.find( {muscle: muscle}, (err, docs) => {
+  const result = models.Shoulder.find( {muscle: "shoulders"}, (err, docs) => {
     if(err) {
       return next({
         log: 'Express error handler caught in gymController.getShoulders Middleware.',
@@ -137,10 +134,7 @@ gymController.getShoulders = (req, res, next) => {
 };
 
 gymController.getBack = (req, res, next) => {
-  const {
-    muscle
-  } = req.body;
-  const result = models.Back.find( {muscle: muscle}, (err, docs) => {
+  const result = models.Back.find( {muscle: "back"}, (err, docs) => {
     if(err) {
       return next({
         log: 'Express error handler caught in gymController.getBack Middleware.',
@@ -155,10 +149,7 @@ gymController.getBack = (req, res, next) => {
 };
 
 gymController.getChest = (req, res, next) => {
-  const {
-    muscle
-  } = req.body;
-  const result = models.Chest.find( {muscle: muscle}, (err, docs) => {
+  const result = models.Chest.find( {muscle: "chest"}, (err, docs) => {
     if(err) {
       return next({
         log: 'Express error handler caught in gymController.getChest Middleware.',
@@ -173,10 +164,7 @@ gymController.getChest = (req, res, next) => {
 };
 
 gymController.getArms = (req, res, next) => {
-  const {
-    muscle
-  } = req.body;
-  const result = models.Arm.find( {muscle: muscle}, (err, docs) => {
+  const result = models.Arm.find( {muscle: "arms"}, (err, docs) => {
     if(err) {
       return next({
         log: 'Express error handler caught in gymController.getArms Middleware.',
@@ -192,10 +180,7 @@ gymController.getArms = (req, res, next) => {
 };
 
 gymController.getLegs = (req, res, next) => {
-  const {
-    muscle
-  } = req.body;
-  const result = models.Leg.find( {muscle: muscle}, (err, docs) => {
+  const result = models.Leg.find( {muscle: "legs"}, (err, docs) => {
     if(err) {
       return next({
         log: 'Express error handler caught in gymController.getLegs Middleware.',

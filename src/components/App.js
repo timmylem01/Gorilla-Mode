@@ -8,7 +8,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      value: "" 
+      value: "",
+      example: "" 
     };
     this.handleSelect = this.handleSelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,7 +21,12 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    const url = "http://localhost:3000/api/" + this.state.value;
+    console.log(url);
     console.log(this.state.value);
+    fetch(url)
+    .then((result) => result.json())
+    .then((data) => console.log(data))
   }
 
   render() {
@@ -31,7 +37,7 @@ class App extends React.Component {
           formLabel="Choose a muscle"
           buttonText="Send form"
           onChange={this.handleSelect}
-          action="/"
+          onSubmit={this.handleSubmit}
         >
           <Option selected value="Click to see options" />
           <Option value="shoulders" />
