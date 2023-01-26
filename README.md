@@ -1,2 +1,3 @@
-# Solo-Project-1
-Codesmith Solo Project 1
+# Gorilla-Mode 
+Web application for finding workouts!
+
